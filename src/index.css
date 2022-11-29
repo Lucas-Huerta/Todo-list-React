@@ -11,3 +11,54 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.App{
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.App input{
+  margin-bottom: 20px;
+}
+
+.App button{
+  border-radius: 15px;
+  padding: 5px 0;
+}
+
+.App .AddButton{
+  background-color: #F3E9DC;
+  width: 10%;
+}
+
+.App ul{
+  width: 50%; 
+  margin: 5% 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.App li{
+  width: 30%;
+  margin: 5px 0;
+  padding: 5px 10px;
+  border: black solid 4px;
+  font-size: 30px;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.App .DeleteButton{
+  width: 30px;
+  background-color: #C08552;
+  color: white;
+  border: none;
+}

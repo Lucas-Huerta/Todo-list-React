@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import "./index.css";
+// composant form todo list et todo
 
 function App() {
   const [list, setList] = useState([]);
@@ -24,19 +26,27 @@ function App() {
     setList(newList);
   };
   return (
-    <div>
+    <div className="App">
       <h1>Todo list</h1>
       <input
         type="text"
-        value={input}
+        value={input.value}
         onChange={(e) => setInput(e.target.value)}
       ></input>
-      <button onClick={() => addTodo(input)}>Add</button>
-      <ul>
+      <button onClick={() => addTodo(input)} className="AddButton">
+        Add
+      </button>
+
+      <ul className="Note">
         {list.map((todo) => (
-          <li key={todo.id}>
+          <li>
             {todo.todo}
-            <button onClick={() => deleteTodo(todo.id)}>&times;</button>
+            <button
+              onClick={() => deleteTodo(todo.id)}
+              className="DeleteButton"
+            >
+              &times;
+            </button>
           </li>
         ))}
       </ul>
